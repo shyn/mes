@@ -2,6 +2,7 @@
 import sys
 
 try:
+    import settings
     import pinax
 except ImportError:
     sys.stderr.write("Error: Can't import Pinax. Make sure you are in a "

@@ -135,8 +135,8 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.csrf.CsrfViewMiddleware",
     #"django.middleware.csrf.CsrfResponseMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "session_security.middleware.SessionSecurityMiddleware",
-    "django_openid.consumer.SessionConsumer",
+    #"session_security.middleware.SessionSecurityMiddleware",
+    #"django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
     #"pinax.apps.account.middleware.LocaleMiddleware",
     "pagination.middleware.PaginationMiddleware",
@@ -304,6 +304,7 @@ ABSOLUTE_URL_OVERRIDES = {
 }
 
 AUTH_PROFILE_MODULE = "profiles.Profile"
+IDIOS_PROFILE_MODULES = ["profiles.models.Profile"]
 NOTIFICATION_LANGUAGE_MODULE = "account.Account"
 
 ACCOUNT_OPEN_SIGNUP = True

@@ -1,5 +1,4 @@
 from django.conf import settings
-import magic
 from extensions.custom_fields.encrypt import get_prep_value_encrypt,encryption_header_notin_field
 
 
@@ -8,6 +7,7 @@ from yt_file.models import *
 # obj is the target content object
 def yt_file_save(file, obj, display_name, path): 
     if file is not None:
+        import magic
         name = file.name
         content = file.read()
         file_type = magic.from_buffer(content)
